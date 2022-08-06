@@ -1,3 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
 
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+:root {
+  --primary-black: #222222;
+  --hover-black: #5b5b5b;
+  --primary-white: #d7d7d7;
+  --hover-white: #fafafa;
+}
+
+body.dark-theme {
+  --primary-black: #d7d7d7;
+  --hover-black: #fafafa;
+  --primary-white: #222222;
+  --hover-white: #5b5b5b;
+}
+
+body {
+  font-family: Sora, sans-serif;
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-white);
+  border-bottom: 1px solid var(--hover-black);
+  z-index: 2;
+}
+
+.header__body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  z-index: 10;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-black);
+}
+
+.header__logo:hover {
+  color: var(--hover-black);
+}
+
+.header__theme-btn {
+  margin-left: 40px;
+  background-color: transparent;
+}
+
+.header__theme-btn i {
+  font-size: 20px;
+  border: 1px solid transparent;
+  color: var(--primary-black);
+  border-radius: 8px;
+  padding: 8px;
+  transition: all 0.35s ease;
+}
+
+.header__theme-btn i:last-child {
+  display: none;
+}
+
+.header__theme-btn.active i:last-child {
+  display: block;
+}
+
+.header__theme-btn.active i:first-child {
+  display: none;
+}
+
+.header__theme-btn i:hover {
+  border: 1px solid var(--hover-black);
+  color: var(--hover-black);
+}
+
+.content {
+  padding-top: 80px;
+}
+
+.content__title:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.content__subtitle:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.content__text p :not(:last-child) {
+  padding-bottom: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */
